@@ -1,0 +1,27 @@
+
+.nav {
+  list-style: none;   
+  width: auto;
+  display: flex; 
+  font-size: 1rem;
+  border: 1px solid white;
+  padding: 1rem;
+  border-radius: 1rem 1rem 0 0;
+  border-bottom: 0;
+
+  &-item {
+    color: white;
+    list-style: none;
+    text-decoration: none;
+    padding: 1rem;
+    justify-content: space-between;
+
+
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+  }
+}
+
