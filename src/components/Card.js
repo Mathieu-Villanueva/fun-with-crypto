@@ -1,8 +1,22 @@
 import React, { useState } from 'react';
 import NumberFormat from 'react-number-format'
+import crypto from '../data';
 
-const Card = ({eur, name, usd}) => {
+const Card = ({eur, name, usd, title}) => {
 
+  const [doneOnce, setDoneOnce] = useState(false)
+  const [cryptoTitle, setCryptoTitle] = useState()
+
+  crypto.forEach(element => {
+    if (!doneOnce) {
+      if(title === element.label) {
+        const titre = element.name;
+        setCryptoTitle(titre);
+      }
+      setDoneOnce(true)      
+    }
+  });
+    
   return (
     <>
     <div className="container">
@@ -11,15 +25,16 @@ const Card = ({eur, name, usd}) => {
           <img src={process.env.PUBLIC_URL + `/assets/${name}.png`} alt=""/>
         </div>
         <div className="content">
-          <h2>{name}</h2>
+          <h2>{cryptoTitle}</h2>
           <div className="values">
+            <h3> Short : {name}</h3>
             <div className="eur">
               <h3>€ :</h3>
               <span>{<NumberFormat 
                 value={eur} 
                 displayType={'text'}
-                thousandSeparator={true}
-              />} €</span>
+                thousandSeparator={''}
+              />}</span>
             </div>
             <div className="usd">
               <h3>$ :</h3>
@@ -27,9 +42,9 @@ const Card = ({eur, name, usd}) => {
                 value={usd} 
                 displayType={'text'}
                 thousandSeparator={true}
-              />} $</span>
+              />} </span>
             </div>
-            <a href="#" target="_blank">Find</a>
+            <a href={`https://www.cryptocompare.com/coins/${name.toLowerCase()}/overview`} target="_Blank" >Find</a>
           </div>
         </div>
     </div>

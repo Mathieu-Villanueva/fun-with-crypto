@@ -1,12 +1,25 @@
 body {
   background-color: #282c34;
   margin: 0;
+  padding: 0;
   color: white;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.background {
+  position: absolute;
+  z-index: -10;
+  width: 100%;
+  height: 200px;
+  left: 0vh;
+  top: 50vh;
+  background-color: rgb(86, 10, 109);
+  transform: skew(0deg, 10deg);
+  background-repeat: repeat-y;
 }
 
 .react-logo {
@@ -26,12 +39,6 @@ body {
   margin: 1rem auto;
   text-align: center;
 }
-
-.main {
-  border: 1px solid white;
-  border-radius: 15px;
-}
-
 
 
 @media (prefers-reduced-motion: no-preference) {

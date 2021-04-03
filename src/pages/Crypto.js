@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import axios from 'axios';
 import Card from '../components/Card';
+import Social from '../components/Social';
 
 const Crypto = () => {
 
@@ -15,17 +16,17 @@ const Crypto = () => {
       .get('https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,LTC,DASH,XMR&tsyms=USD,EUR&api_key={1409420410fe99a1624ecd7154025fd8a130193722722d1d13183f15681450cc}')
       .then((res) => {
         setCryptos(res.data)
-        console.log(cryptos)
         setPlayOnce(false)
       })
     }
   }) 
 
   return (
-    <div>
+    <div className="page-crypto">
       <Header />
-      <div className='main'>
-        <h2>Crypto currencies</h2>
+        <div className="background"></div>
+      <div className='crypto'>
+        <div className="crypto-background"></div>
         <div className="crypto-list">
           {Object.keys(cryptos).map((index) => (
             <Card
@@ -33,10 +34,12 @@ const Crypto = () => {
               name={index}
               eur={cryptos[index].EUR}
               usd={cryptos[index].USD}
+              title={index}
             />
           ))}
         </div>
       </div>
+      <Social />
     </div>
     );
 };
