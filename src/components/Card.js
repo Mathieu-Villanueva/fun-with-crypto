@@ -11,14 +11,12 @@ const Card = ({eur, name, usd}) => {
         <h3 className="crypto-title">{name}</h3>
         <div 
         className='crypto-values'>
-          <p>EURO :  
-            {<NumberFormat 
+          <p className="EUR">EURO : {<NumberFormat 
               value={eur} 
               displayType={'text'}
               thousandSeparator={true}
             />}</p>
-          <p>USD : 
-            {<NumberFormat 
+          <p className="USD">USD : {<NumberFormat 
               value={usd} 
               displayType={'text'}
               thousandSeparator={true}

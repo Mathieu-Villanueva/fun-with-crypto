@@ -1,5 +1,5 @@
 {
-  "name": "fun-with-e-commerce",
+  "name": "fun-with-crypto",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -38,5 +38,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "main": "index.js",
+  "repository": "git@github.com:Mathieu-Villanueva/fun-with-crypto.git",
+  "author": "Mathieu-Villanueva <villanueva.mathieu@gmail.com>",
+  "license": "MIT"
 }

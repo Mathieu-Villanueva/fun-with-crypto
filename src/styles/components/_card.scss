@@ -6,7 +6,7 @@
   height: 150px;
   border: 2px solid white;
   border-radius: 2rem;
-  margin: 1rem;
+  margin: 1rem auto;
   padding: 1rem;
   color: white;
   cursor: pointer;
@@ -41,31 +41,33 @@
   }
 
   &:hover {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: 
+      "crypto-logo crypto-title"
+      "crypto-values crypto-values";
+    justify-items: center;
+    align-items: center;
     background-color: #282c34;
     z-index: 1;
     transform: scale(1.25);
-    border: 2px solid yellowgreen;
+    border: 2px solid rgb(50, 205, 179);
     -webkit-box-shadow: 12px 12px 15px -4px rgba(0,0,0,0.5); 
     box-shadow: 12px 12px 15px -4px rgba(0,0,0,0.5);
     overflow: visible;
 
     .crypto-logo{
-      transform: translate(-55px, -20px);
-      width: 5vw;
-      min-width: 2px;
-      height: 5vw;
-      min-height: 2px;
-      top: 1vh;
+      width: 8vw;
+      min-width: 7vw;
+      height: auto;
+      min-height: auto;
     }
 
-    .crypto-title {
-      transform: translate(33px, -75px);
-    }
     .crypto-values {
-      transform: translateY(-70px);
+      display: contents;
       opacity: 1;
     }
-    
   }
  
 }

@@ -5,7 +5,10 @@ const Nav = () => {
     return (
         <nav className='nav'>
             <li>
-                <Link to='/' className='nav-item'>Currencies</Link>
+                <Link to='/' className='nav-item'>Home</Link>
+            </li>
+            <li>
+                <Link to='/crypto' className='nav-item'>Crypto-Money</Link>
             </li>
             <li>
                 <Link to='/about' className='nav-item'>About</Link>

@@ -1,44 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Header from '../components/Header';
-import axios from 'axios';
-import Card from '../components/Card';
+import Nav from '../components/Nav';
 
 const Home = () => {
-
-  const [cryptos,setCryptos] = useState([]);
-  const [playOnce,setPlayOnce] = useState(true)
-
-  useEffect(() => {
-    if (playOnce) {
-        
-      axios
-      .get('https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,LTC,DASH,XMR&tsyms=USD,EUR&api_key={1409420410fe99a1624ecd7154025fd8a130193722722d1d13183f15681450cc}')
-      .then((res) => {
-        setCryptos(res.data)
-        console.log(cryptos)
-        setPlayOnce(false)
-      })
-    }
-  }) 
-
   return (
-    <div>
+    <div >
       <Header />
-      <div className='main'>
-        <h2>Crypto currencies</h2>
-        <div className="crypto-list">
-          {Object.keys(cryptos).map((index) => (
-            <Card
-              keys={(cryptos[index].EUR) + (cryptos[index].USD)}
-              name={index}
-              eur={cryptos[index].EUR}
-              usd={cryptos[index].USD}
-            />
-          ))}
-        </div>
+      <div className="main">
+        <h2>Welcome</h2>
+          <div className="second">
+            <div className="children">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quas assumenda, consequuntur quisquam voluptas perspiciatis ab ipsum laudantium ipsam magnam, provident sed laboriosam aspernatur voluptatem est? Id nostrum veritatis eaque.</p>
+              <p>Rem placeat dicta quibusdam mollitia omnis quisquam vitae dolore doloremque atque ut fugiat consequuntur, impedit repellendus, culpa cupiditate. Molestiae optio porro nobis modi corporis eligendi expedita quaerat, voluptas adipisci delectus.</p>
+              <p>Enim tenetur libero assumenda molestiae excepturi fuga ducimus fugiat voluptatum, porro aspernatur ipsam voluptas facere quia ullam incidunt quam non ex soluta, culpa id odit, deleniti rerum! Ipsa, corporis reprehenderit!</p>
+            </div>
+          </div>
       </div>
     </div>
-    );
+  );
 };
 
 export default Home;

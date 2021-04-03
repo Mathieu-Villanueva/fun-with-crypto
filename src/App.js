@@ -3,6 +3,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
 import logo from './logo.svg';
+import Crypto from './pages/Crypto';
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
             <Switch>
               <Route path="/" exact>
                 <Home />
+              </Route>
+              <Route path="/crypto" exact>
+                <Crypto />
               </Route>
               <Route path='/about' exact >
                 <About />
