@@ -13,13 +13,12 @@ body {
 .background {
   position: absolute;
   z-index: -10;
-  width: 100%;
+  width: 100vw;
   height: 200px;
   left: 0vh;
   top: 50vh;
   background-color: rgb(86, 10, 109);
   transform: skew(0deg, 10deg);
-  background-repeat: repeat-y;
 }
 
 .react-logo {

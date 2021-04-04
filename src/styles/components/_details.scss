@@ -1,0 +1,50 @@
+
+.hidden {
+  visibility: hidden;
+  width: 0px;
+  height: 0px;
+  margin: 0;
+  padding: 0;
+}
+
+.show {
+  z-index: 10000;
+  position: relative;
+  visibility: visible;
+  width: inherit;
+  height: inherit;
+
+  .details {
+    position: fixed;
+    top: 10vh;
+    left: 10vw;
+    width: 80vw;
+    height: 80vh; 
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background-color: #232323;
+    transition: all .5s ease-in-out;
+
+    & .close {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      background-color: #232323;
+      padding: 10px;
+      border: none;
+      border-radius: 50%;
+      color: white;
+      transition: .5s ease-in-out;
+      transition: hover 0s ease-in-out;
+
+      &:hover {
+        background-color: #333333;
+        cursor: pointer;
+      }
+    }
+  }
+}
+

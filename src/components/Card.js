@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 import NumberFormat from 'react-number-format'
 import crypto from '../data';
+import Details from './Details/Details';
 
 const Card = ({eur, name, usd, title}) => {
 
+
   const [doneOnce, setDoneOnce] = useState(false)
   const [cryptoTitle, setCryptoTitle] = useState()
+  const [showDetails, setShowDetails] = useState(false)
+
+  const handleClick = () => (setShowDetails(!showDetails));
 
   crypto.forEach(element => {
     if (!doneOnce) {
@@ -20,7 +25,7 @@ const Card = ({eur, name, usd, title}) => {
   return (
     <>
     <div className="container">
-      <div className="card">
+      <div className="card" onClick={handleClick}>
         <div className="img-box">
           <img src={process.env.PUBLIC_URL + `/assets/${name}.png`} alt=""/>
         </div>
@@ -30,25 +35,23 @@ const Card = ({eur, name, usd, title}) => {
             <h3> Short : {name}</h3>
             <div className="eur">
               <h3>€ :</h3>
-              <span>{<NumberFormat 
-                value={eur} 
-                displayType={'text'}
-                thousandSeparator={''}
-              />}</span>
+              <span>{<NumberFormat value={eur} displayType={'text'} thousandSeparator={' '}/>}</span>
             </div>
             <div className="usd">
               <h3>$ :</h3>
-              <span>{<NumberFormat 
-                value={usd} 
-                displayType={'text'}
-                thousandSeparator={true}
-              />} </span>
+              <span>{<NumberFormat value={usd}  displayType={'text'} thousandSeparator={' '}/>}</span>
             </div>
-            <a href={`https://www.cryptocompare.com/coins/${name.toLowerCase()}/overview`} target="_Blank" >Find</a>
+            <button onClick={handleClick} >Learn more</button>
           </div>
         </div>
+      </div>
+      <div className={showDetails ? 'show' : 'hidden'}>
+          <Details
+            details={ {eur, name, usd, cryptoTitle} }
+            onClick={handleClick} />
+        </div>
+      
     </div>
-  </div>
   </>
   );
 };

@@ -24,13 +24,15 @@ const Crypto = () => {
   return (
     <div className="page-crypto">
       <Header />
-        <div className="background"></div>
+      <div className="background">
+        <Social />
+      </div>
       <div className='crypto'>
         <div className="crypto-background"></div>
         <div className="crypto-list">
           {Object.keys(cryptos).map((index) => (
             <Card
-              keys={(cryptos[index].EUR) + (cryptos[index].USD)}
+              key={cryptos[index].EUR + cryptos[index].USD}
               name={index}
               eur={cryptos[index].EUR}
               usd={cryptos[index].USD}
@@ -39,7 +41,6 @@ const Crypto = () => {
           ))}
         </div>
       </div>
-      <Social />
     </div>
     );
 };

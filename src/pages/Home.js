@@ -6,7 +6,9 @@ const Home = () => {
   return (
     <div className="page-home">
       <Header />
-      <div className="background"></div>
+      <div className="background">
+        <Social />
+      </div>
       <div className="home">
         <h2 className="home--title">Welcome</h2>
           <div className="home-content">
@@ -22,7 +24,6 @@ const Home = () => {
             </div>
           </div>
       </div>
-      <Social />
     </div>
   );
 };

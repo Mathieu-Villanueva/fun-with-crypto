@@ -21,8 +21,10 @@
 }
 .container {
   position: relative;
+  
 
   & .card {
+    z-index: 2;
     margin: 1rem;
     position: relative;
     width: 180px;
@@ -30,7 +32,7 @@
     background: #232323;
     border-radius: 20px;
     overflow: hidden;
-    transition: transform .6 ease-in-out;
+    transition: transform .6s ease-in-out;
 
     &:hover {
       //transform: scale(1.01);
@@ -52,7 +54,7 @@
             transform: translateY(0px);
             transition-delay: .25s;
           }
-          & a {
+          & button {
             opacity: 1;
             transform: translateY(0px);
             transition-delay: .5s;
@@ -87,14 +89,13 @@
     &:after {
       content: 'CRYPTO';
       position: absolute;
-      top: 40%;
+      top: 20%;
       left: -20%;
       font-size: 6em;
       font-weight: 800;
       font-style: italic;
       color: rgba(255,255,255,0.02);
       transform: rotate(-25deg);
-      //opacity: 0;
       transition: transform 1s ease-in-out;
     }
 
@@ -168,7 +169,8 @@
             border-radius: 4px;
           }
         }
-        & a{
+        & button{
+          cursor: pointer;
           display: inline-block;
           padding: 5px 10px;
           background:#fff;

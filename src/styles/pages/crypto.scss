@@ -1,4 +1,11 @@
 .page-crypto {
+  
+  & .crypto {
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+  }
+
   .background {
     background-color: rgba(207, 207, 207, 0.411);
   }
