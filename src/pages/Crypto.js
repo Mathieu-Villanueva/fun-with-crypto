@@ -7,19 +7,30 @@ import Social from '../components/Social';
 const Crypto = () => {
 
   const [cryptos,setCryptos] = useState([]);
-  const [playOnce,setPlayOnce] = useState(true)
+  const [detailsActive, setdetailsActive] = useState(false);
 
   useEffect(() => {
-    if (playOnce) {
-        
-      axios
-      .get('https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,LTC,DASH,XMR&tsyms=USD,EUR&api_key={1409420410fe99a1624ecd7154025fd8a130193722722d1d13183f15681450cc}')
-      .then((res) => {
-        setCryptos(res.data)
-        setPlayOnce(false)
-      })
+    if (detailsActive === false) {
+      const interval = setInterval(() => {          
+        axios
+          .get(
+            'https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,LTC,DASH,XMR&tsyms=USD,EUR&api_key={1409420410fe99a1624ecd7154025fd8a130193722722d1d13183f15681450cc}'
+          )
+          .then((res) => {
+            setCryptos(res.data)
+            console.log('a');
+          })
+      }, 5000);      
+      return () => {
+        clearInterval(interval);
+      }
     }
   }) 
+
+  const handleDetails = () => {
+    setdetailsActive(!detailsActive)
+    console.log(detailsActive)
+  }
 
   return (
     <div className="page-crypto">
@@ -37,6 +48,8 @@ const Crypto = () => {
               eur={cryptos[index].EUR}
               usd={cryptos[index].USD}
               title={index}
+              details={handleDetails}
+              hover={handleDetails}
             />
           ))}
         </div>

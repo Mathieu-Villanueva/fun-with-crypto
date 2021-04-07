@@ -4,6 +4,7 @@ import Contact from './pages/Contact';
 import Home from './pages/Home';
 import logo from './logo.svg';
 import Crypto from './pages/Crypto';
+import Essai from './pages/Essai';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
           </div>
           <div className="page-container">
             <Switch>
-              <Route path="/" exact>
+              <Route path="/home" exact>
                 <Home />
               </Route>
               <Route path="/crypto" exact>
@@ -25,7 +26,8 @@ function App() {
               <Route path='/contacts' exact>
                 <Contact/>
               </Route>
-              <Route >
+              <Route path='/' exact>
+                <Essai />
               </Route>
             </Switch>  
           </div>

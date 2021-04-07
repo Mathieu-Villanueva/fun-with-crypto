@@ -3,14 +3,20 @@ import NumberFormat from 'react-number-format'
 import crypto from '../data';
 import Details from './Details/Details';
 
-const Card = ({eur, name, usd, title}) => {
+const Card = ({eur, name, usd, title, details, hover}) => {
 
 
   const [doneOnce, setDoneOnce] = useState(false)
   const [cryptoTitle, setCryptoTitle] = useState()
   const [showDetails, setShowDetails] = useState(false)
 
-  const handleClick = () => (setShowDetails(!showDetails));
+  const handleClick = () => {
+    setShowDetails(!showDetails)
+    details(details)
+  };
+  const handleHover = () => {
+    hover(hover)
+  }
 
   crypto.forEach(element => {
     if (!doneOnce) {
@@ -25,7 +31,7 @@ const Card = ({eur, name, usd, title}) => {
   return (
     <>
     <div className="container">
-      <div className="card" onClick={handleClick}>
+      <div className="card" onClick={handleClick} onMouseEnter={handleHover} onMouseLeave={handleHover}>
         <div className="img-box">
           <img src={process.env.PUBLIC_URL + `/assets/${name}.png`} alt=""/>
         </div>
