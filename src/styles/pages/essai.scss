@@ -1,18 +1,23 @@
-.cube {
+.page-essai {
+    height: 90vh;
+    width: 70vw;
     position: relative;
+}
+
+.cube {
+    position: absolute;
+    top: 50%;
+    left: 50%;
 
     & .face {
         display: flex;
         justify-content: center;
         align-items: center;
         position: absolute;
-        top: 50vh;
-        left: 50vh;
         width: 100px;
         height: 100px;
         margin: 0 10px;
         background-color: #232323;
-        transform: translateY(-100px);
 
         & span {
             color: white;
