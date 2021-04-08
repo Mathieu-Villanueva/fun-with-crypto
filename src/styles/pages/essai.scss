@@ -1,13 +1,16 @@
 .page-essai {
+    margin: 0 auto;
     height: 90vh;
     width: 70vw;
     position: relative;
 }
 
 .cube {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    width: 10%;
+    height: 10%;
+    position: relative;
+    top: 45%;
+    left: 45%;
 
     & .face {
         display: flex;
@@ -204,6 +207,11 @@
     .disabled {
         pointer-events: none;
     }
+}
 
+.activated {
+    transition: 1s cubic-bezier(.41,-0.65,1,.04);
+    transform: scale(0);
+    transform-origin: left;
 }
 

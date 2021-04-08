@@ -2,42 +2,52 @@ import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import axios from 'axios';
 import Card from '../components/Card';
-import Social from '../components/Social';
 
 const Crypto = () => {
 
   const [cryptos,setCryptos] = useState([]);
   const [detailsActive, setdetailsActive] = useState(false);
+  const [playOnce, setPlayOnce] = useState(false)
 
   useEffect(() => {
-    if (detailsActive === false) {
+
+    if (detailsActive === false && playOnce === true) {
       const interval = setInterval(() => {          
         axios
           .get(
-            'https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,LTC,DASH,XMR&tsyms=USD,EUR&api_key={1409420410fe99a1624ecd7154025fd8a130193722722d1d13183f15681450cc}'
+            'https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,LTC,DASH,XMR&tsyms=USD,EUR&api_key={81b5fb5c850e9c6b37c7a68c67eae6635f7456a086ba13fd60f11fdf44287047}'
           )
           .then((res) => {
             setCryptos(res.data)
-            console.log('a');
+            console.log(res.data);
           })
-      }, 2000);      
+      }, 60000);      
       return () => {
         clearInterval(interval);
       }
     }
-  }) 
+    if(playOnce === false){
+      setPlayOnce(true)
+      axios
+      .get(
+        'https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,LTC,DASH,XMR&tsyms=USD,EUR&api_key={81b5fb5c850e9c6b37c7a68c67eae6635f7456a086ba13fd60f11fdf44287047}'
+      )
+      .then((res) => {
+        setCryptos(res.data)
+        console.log(res.data);
+      })
+    }
+
+  },[playOnce]) 
 
   const handleDetails = () => {
     setdetailsActive(!detailsActive)
-    console.log(detailsActive)
   }
 
   return (
     <div className="page-crypto">
       <Header />
-      <div className="background">
-        <Social />
-      </div>
+      <div className="background"/>
       <div className='crypto'>
         <div className="crypto-background"></div>
         <div className="crypto-list">
