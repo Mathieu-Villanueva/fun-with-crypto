@@ -38,7 +38,7 @@ const Crypto = () => {
       })
     }
 
-  },[playOnce]) 
+  },[playOnce, detailsActive]) 
 
   const handleDetails = () => {
     setdetailsActive(!detailsActive)
