@@ -20,7 +20,7 @@ const Crypto = () => {
             setCryptos(res.data)
             console.log('a');
           })
-      }, 5000);      
+      }, 2000);      
       return () => {
         clearInterval(interval);
       }
