@@ -6,7 +6,7 @@ const Social = () => {
     <div className="link">
       <ul>
       <li>
-          <a href="#">
+          <a href="https://fr.linkedin.com/">
             <span></span>
             <span></span>
             <span></span>
@@ -15,7 +15,7 @@ const Social = () => {
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="https://www.facebook.com/">
             <span></span>
             <span></span>
             <span></span>
@@ -24,7 +24,7 @@ const Social = () => {
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="https://twitter.com/?lang=fr">
             <span></span>
             <span></span>
             <span></span>
