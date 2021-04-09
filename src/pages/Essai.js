@@ -12,7 +12,8 @@ const Essai = () => {
 		if (linkActivated) {
 			const URL = linkActivated.substring(1)
 			const BASE = document.baseURI;
-			window.location.href = `${BASE}${URL}`;
+			console.log(BASE + ' ' + URL);
+			//window.location.href = `${BASE}${URL}`;
 		}
 	},[linkActivated])
 

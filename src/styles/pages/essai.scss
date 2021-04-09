@@ -212,6 +212,7 @@
 .activated {
     transition: 1s cubic-bezier(.41,-0.65,1,.04);
     transform: scale(0);
-    transform-origin: left;
+    opacity: 0;
+    transform-origin: center;
 }
 
