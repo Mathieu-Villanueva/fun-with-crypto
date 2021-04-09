@@ -1,5 +1,6 @@
 body {
   background-color: #282c34;
+  //background-color: white;
   margin: 0;
   padding: 0;
   color: white;
@@ -9,45 +10,47 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-.background {
-  position: absolute;
-  z-index: -10;
+.App {
   width: 100vw;
-  height: 200px;
-  left: 0vh;
-  top: 50vh;
-  background-color: rgb(86, 10, 109);
-  transform: skew(0deg, 10deg);
+  height: 100vh;
 }
 
 .react-logo {
-  position: absolute;
+  position: fixed;
+  top: 5%;
+  right: 10%;
   width: 10vw;
   height: 10vh;
   max-width: 100px;
 }
 
-.App-logo {
-  height: auto;
-  position: relative;
+.background {
+  z-index: -10;
+  position: fixed;
+  width: 100vw;
+  height: 200px;
+  left: 0;
+  top: 50vh;
+  transform: skew(0deg, 10deg);
 }
+
 
 .page-container {
   width: 80vw;
+  height: inherit;
   margin: 1rem auto;
   text-align: center;
 }
 
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
+  .react-logo {
     animation: App-logo-spin infinite 25s linear;
   }
 }
 
 @media (max-width: 768px){
-  .App-logo {
+  .react-logo {
     display: none;
   }
 }

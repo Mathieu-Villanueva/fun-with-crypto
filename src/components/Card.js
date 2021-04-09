@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import NumberFormat from 'react-number-format'
-import crypto from '../data';
+import {crypto} from '../data';
 import Details from './Details/Details';
 
 const Card = ({eur, name, usd, title, details, hover}) => {

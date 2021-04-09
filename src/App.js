@@ -4,17 +4,14 @@ import Contact from './pages/Contact';
 import Home from './pages/Home';
 import logo from './logo.svg';
 import Crypto from './pages/Crypto';
-import Essai from './pages/Essai';
 
 function App() {
   return (
     <div className="App">
-          <div className="react-logo">
-            <img src={logo} className="App-logo" alt="logo" />
-          </div>
+          <img src={logo} className="react-logo" alt="logo" />
           <div className="page-container">
             <Switch>
-              <Route path="/home" exact>
+              <Route path="/" exact>
                 <Home />
               </Route>
               <Route path="/crypto" exact>
@@ -25,9 +22,6 @@ function App() {
               </Route>
               <Route path='/contacts' exact>
                 <Contact/>
-              </Route>
-              <Route path='/' exact>
-                <Essai />
               </Route>
             </Switch>  
           </div>

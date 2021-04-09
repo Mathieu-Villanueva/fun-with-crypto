@@ -5,7 +5,7 @@ import Social from '../components/Social';
 const Contact = () => {
   return (
     <div className="page-contact">
-      <Header />
+    <Header />
       <div className="background">
         <Social />
       </div>

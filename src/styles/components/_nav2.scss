@@ -1,0 +1,99 @@
+.cube-nav{
+  position: fixed;
+  top: 12.5%;
+  left: 20%;
+
+  & a {
+    text-decoration: none;
+    color: black;
+  }
+
+  & .face{
+    position: absolute;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    background-color: #232323;
+    justify-content: center;
+    align-items: center;
+
+    & span {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &-crypto{
+    position: absolute;
+    transform: rotateY(22.5deg) skewY(-35deg) translateZ(0px) translate(11px, -7px);
+    border-radius: 0% 10% 10% 10%;
+
+    &:hover {
+      transform: scale(1.5) rotateY(22.5deg) skewY(-35deg) translateZ(0px) translate(16px, 4px);
+      background-color: rgb(207, 207, 207);
+      transition: 500ms;
+      border-radius: 0% 10% 40% 10%;
+    }
+
+    & span {
+      transform: skewY(35deg);
+      font-size: .7rem;
+      color: white;
+
+      &:hover {
+        transition: 500ms ease-in-out;
+        color: black;
+      }
+    }
+  }
+
+  &-about{
+    position: absolute;
+    transform: rotateY(-22.5deg) skewY(35deg) translateZ(0px) translate(-45px, 17px);
+    border-radius: 10% 0% 10% 10%;
+
+    &:hover {
+      transform: scale(1.34) rotateY(-22.5deg) skewY(35deg) translateZ(0px) translate(-40px, 20px);
+      background-color: rgb(4, 100, 79);
+      transition: 500ms;
+      border-radius: 10% 0% 10% 40%;
+    }
+
+    & span {
+      transform: skewY(-35deg);
+      color: white;
+      font-size: .8rem;
+
+      &:hover {
+        transition: 500ms;
+      }
+    }
+  }
+
+  &-contacts{
+    position: absolute;
+    transform: scale(1.315) rotateX(40deg) rotateZ(-45deg) translateZ(100px) translate(-24px, 7px);
+    border-radius: 10% 10% 10% 0;
+
+    &:hover {
+      transform: scale(1.8) rotateX(40deg) rotateZ(-45deg) translateZ(86px) translate(-19px, 6px);
+      background-color: rgb(0, 32, 139);
+      transition: 500ms;
+      border-radius: 10% 50% 10% 0;
+    }
+    
+    & span {
+      transform: skew(-45deg,45deg);
+      font-size: 0.5rem;
+      color: white;
+
+      &:hover {
+        transition: 500ms;
+        opacity: 1;
+      }
+    }
+  }
+}

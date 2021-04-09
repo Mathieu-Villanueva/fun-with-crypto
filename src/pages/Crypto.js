@@ -10,7 +10,6 @@ const Crypto = () => {
   const [playOnce, setPlayOnce] = useState(false)
 
   useEffect(() => {
-
     if (detailsActive === false && playOnce === true) {
       const interval = setInterval(() => {          
         axios
@@ -45,11 +44,10 @@ const Crypto = () => {
   }
 
   return (
+    <>
+    <Header />
     <div className="page-crypto">
-      <Header />
       <div className="background"/>
-      <div className='crypto'>
-        <div className="crypto-background"></div>
         <div className="crypto-list">
           {Object.keys(cryptos).map((index) => (
             <Card
@@ -63,8 +61,8 @@ const Crypto = () => {
             />
           ))}
         </div>
-      </div>
     </div>
+    </>
     );
 };
 

@@ -1,31 +1,94 @@
-import React from 'react';
-import Header from '../components/Header';
-import Social from '../components/Social';
+import React, { useEffect, useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
+
+
 
 const Home = () => {
-  return (
-    <div className="page-home">
-      <Header />
-      <div className="background">
-        <Social />
-      </div>
-      <div className="home">
-        <h2 className="home--title">Welcome</h2>
-          <div className="home-content">
-            <h3>So, you might be wondering : What's going on here ?</h3>
-            <div className="children">
-              <p>Actually, not so much ... I know, it's disappointing... But it's my first web app ! So... It's fine if you don't enjoy it as much as I do !</p>
 
-              <p>I'm not trying to make something cool, I'm just learning stuff, some might say that... It looks more as if I've learn nothing yet ! And I agree ! This is pretty bad, but the purpose here is not to show off my skills (mainly because I think they're a no-thing right now) but to try some stuff. New techniques and everything ! Also, it'ld be great to keep this as a reminder of how bad I "was" (or "am"... I don't know... Because it's right now but in the future...) and how much I've learned by the time I'll be reading this </p>
 
-              <p>If you've made it this far, thank you for your time and take care ! 
-                I hope you'll find something interesting here !
-              </p>
-            </div>
-          </div>
-      </div>
-    </div>
-  );
+	const [isHidden, sethidden] = useState(true)
+	const [isIntroing, setisIntroing] = useState(true)
+	const [linkActivated, setLinkActivated] = useState('')
+	const [isOutroing, setisOutroing] = useState(false)
+	
+	const history = useHistory()
+	
+	useEffect(()=> {
+		let mounted = false;
+
+		if (!mounted) {
+			const change = () => {
+				if (linkActivated) {		
+				history.push(linkActivated);
+				}
+			}
+			change()
+		}
+		return function cleanup(){
+			mounted = true
+		}
+	},[linkActivated, history])
+
+	const handleClick = (event) => {
+		event.preventDefault()
+		setisOutroing(true)
+		setTimeout(() => {
+			setLinkActivated(event.target.parentElement.parentNode.attributes[1].value)	
+		}, 1100);
+	}
+
+	setTimeout(() => {
+		sethidden(false)
+	}, 250);
+
+	setTimeout(() => {
+		setisIntroing(false)
+	}, 1500);
+
+	return (
+		<div className="page-home">
+			<div 
+				className={isOutroing ? 'cube activated disabled': 'cube'} >
+				<Link
+					to='/crypto'
+					className={isIntroing ? 'disabled' : ''}
+					onClick={handleClick}
+				>
+					<div className={isHidden ? 'hiddenA': "face a showA"}>
+						<span>Crypto</span>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</Link>
+				<Link 
+					to='/about'
+					className={isIntroing ? 'disabled' : ''}
+					onClick={handleClick}>
+					<div className={isHidden ? 'hiddenB' : "face b showB" }>
+						<span>About</span>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</Link>
+				<Link 
+					to='/contacts' 
+					className={isIntroing ? 'disabled' : ''}
+					onClick={handleClick}>
+					<div className={isHidden ? 'hiddenC' : "face c showC" }>
+						<span>Contact</span>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</Link>
+			</div>
+		</div>
+	);
 };
 
 export default Home;

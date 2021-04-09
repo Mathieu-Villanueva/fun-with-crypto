@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=B612:ital,wght@0,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700;900&display=swap');
+
+
+
+.section {
+  z-index: 1;
+  display: flex;
+  color: white;
+  gap: .5rem;
+
+  &-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #04644F;
+    //background-color: #00208B;
+    width: 25%;
+    height: 200px;
+    padding: 0 1rem;
+    border-radius: 20px 0 0 20px;
+
+    &-title {
+      font-family: 'Titillium Web', sans-serif;
+      font-size: 2.7rem;
+      letter-spacing: .1rem;
+      font-weight: 700;
+    }
+  }
+  &-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #232323;
+    width: 75%;
+    height: 200px;
+    padding: 0 1rem;
+    border-radius: 0 20px 20px 0;
+
+    &-description {
+      width: 40ch;
+      font-size: 1.2rem;
+    }
+  }
+}

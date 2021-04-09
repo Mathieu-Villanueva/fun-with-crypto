@@ -1,13 +1,23 @@
 @import './vars.scss';
 @import './App.scss';
+
 @import './pages/home.scss';
+
 @import './pages/contact.scss';
+
 @import './pages/about.scss';
+  @import './components/About/block';
+  @import './components/About/section';
+  @import './components/About/content';
+
 @import './pages/crypto.scss';
-@import './pages/essai.scss';
-@import './components/nav';
+
+@import './components/nav2';
 @import './components/header';
 @import './components/search';
 @import './components/card-v2';
 @import './components/social';
 @import './components/details';
+
+
+//@import './components/nav';
