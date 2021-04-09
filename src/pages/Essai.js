@@ -5,25 +5,26 @@ import { Link } from 'react-router-dom';
 const Essai = () => {
 	const [hidden, sethidden] = useState(false)
 	const [linkHidden, setlinkHidden] = useState(false)
-	const [linkActivated, setLinkActivated] = useState()
+	//const [linkActivated, setLinkActivated] = useState()
 	const [outro, setOutro] = useState(false)
+	const BASE = document.baseURI;
 
 	useEffect(()=> {
-		if (linkActivated) {
+		console.log(BASE);
+	/*	if (linkActivated) {
 			const URL = linkActivated.substring(1)
-			const BASE = document.baseURI;
 			console.log(BASE + ' ' + URL);
 			//window.location.href = `${BASE}${URL}`;
-		}
-	},[linkActivated])
+		}*/
+	},[/*linkActivated*/BASE])
 
 
 	const handleClick = (event) => {
-		event.preventDefault()
+		//event.preventDefault()
 		setOutro(true)
-		setTimeout(() => {
-			setLinkActivated(event.target.parentElement.parentNode.attributes[1].value)
-		}, 1000);
+		//setTimeout(() => {
+		//	setLinkActivated(event.target.parentElement.parentNode.attributes[1].value)
+		//}, 1000);
 	}
  
 	setTimeout(() => {
@@ -33,8 +34,6 @@ const Essai = () => {
 	setTimeout(() => {
 		setlinkHidden(true)
 	}, 1500);
-
-	console.log(outro);
 
 	return (
 		<div className="page-essai">
