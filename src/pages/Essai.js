@@ -1,32 +1,43 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+
 
 
 const Essai = () => {
 	const [hidden, sethidden] = useState(false)
 	const [linkHidden, setlinkHidden] = useState(false)
-	//const [linkActivated, setLinkActivated] = useState()
+	const [linkActivated, setLinkActivated] = useState()
 	const [outro, setOutro] = useState(false)
-	const BASE = document.baseURI;
+	
+
+	const history = useHistory()
+	
 
 	useEffect(()=> {
-		console.log(BASE);
-	/*	if (linkActivated) {
-			const URL = linkActivated.substring(1)
-			console.log(BASE + ' ' + URL);
-			//window.location.href = `${BASE}${URL}`;
-		}*/
-	},[/*linkActivated*/BASE])
+		let mounted = false;
+
+		if (!mounted) {
+			const change = () => {
+				if (linkActivated) {		
+					history.push(linkActivated);
+				}
+			}
+			change()
+		}
+		return function cleanup(){
+			mounted = true
+		}
+	},[linkActivated, history])
 
 
 	const handleClick = (event) => {
-		//event.preventDefault()
+		event.preventDefault()
 		setOutro(true)
-		//setTimeout(() => {
-		//	setLinkActivated(event.target.parentElement.parentNode.attributes[1].value)
-		//}, 1000);
+		setTimeout(() => {
+			setLinkActivated(event.target.parentElement.parentNode.attributes[1].value)	
+		}, 1100);
 	}
- 
+
 	setTimeout(() => {
 		sethidden(true)
 	}, 500);
