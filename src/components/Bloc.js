@@ -1,24 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Content from './Content';
 import Section from './Section';
 
 const Block = ({...element}) => {
-  
-	const [isEven, setIsEven] = useState(false);
 
-  useEffect(() =>{
-      if (element.id%2 === 0) {
-        setIsEven('even')
-      }else{
-        setIsEven('odd')
-      }
-  },[element.id])
+  const [isShown, setIsShown] = useState(false);
+
+  const showContent = () => {
+    setIsShown(!isShown);
+  }
   
 
   return (
     <div className="bloc">
-      <Section {...element.section} isEven={isEven}/>
-      <Content {...element.content} />
+      <Section {...element.section} onClick={showContent}/>
+      <Content {...element.content} isShown={isShown} />
     </div>
   );
 };

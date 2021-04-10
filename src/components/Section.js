@@ -1,10 +1,9 @@
 import React from 'react';
 
-const Section = ({isEven,...element}) => {
+const Section = ({onClick, ...element}) => {
 
-  
   return (
-    <div className="section">
+    <div className="section" onClick={onClick}>
       <div className="section-left">
         <h3 className="section-left-title">{element.title}</h3>
       </div>
