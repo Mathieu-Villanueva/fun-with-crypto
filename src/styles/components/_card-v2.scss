@@ -55,12 +55,12 @@
           }
           & .usd {
             transform: translateY(0px);
-            transition-delay: .25s;
+            transition-delay: 125ms;
           }
           & button {
             opacity: 1;
             transform: translateY(0px);
-            transition-delay: .5s;
+            transition-delay: 250ms;
           }
         }
       }
@@ -109,7 +109,7 @@
       z-index: 100;
       width: 100%;
       height: 110px;
-      transition: .5s;
+      transition: 500ms;
       & img {
         position: absolute;
         top: 30%;
@@ -184,7 +184,7 @@
           color: #111;
           opacity: 0;
           transform: translateY(50px);
-          transition: .5s;
+          transition: 350ms;
           border: 0;
           padding: .75rem;
         }

@@ -8,6 +8,7 @@ const About = () => {
 		<>
 		<Header />
 		<div className="page-about">
+			<div className="background"></div>
 				{block.map((element) => (
 					<Block key={element.id} {...element}/>
 				))}

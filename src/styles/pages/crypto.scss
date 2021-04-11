@@ -1,7 +1,13 @@
 .page-crypto {
   position: relative;
   height: auto;
-  padding: 1rem;
+
+  &-title{
+    background-color: #232323;
+    padding: 1rem;
+    border-radius: 20px;
+    height: 50px;
+  }
   
 
   .background {
@@ -9,7 +15,14 @@
   }
 
   .underconstruct {
+    margin: 1rem auto;
     padding: 1rem;
-    background-color: rgb(5, 139, 16);
+    width: fit-content;
+    background-color: #04644F;
+    border-radius: 20px;
+    
+    & a {
+      color: white ;
+    } 
   }
 }

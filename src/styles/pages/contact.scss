@@ -10,13 +10,15 @@
     z-index: 1;
     
   .underconstruct {
+    margin: 1rem auto;
     padding: 1rem;
-    background-color: rgb(5, 139, 16);
+    width: fit-content;
+    background-color: #04644F;
+    border-radius: 20px;
   }
 
     & a {
       color: white ;
-
-    }
+    } 
   }
 }

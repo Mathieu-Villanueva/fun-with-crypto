@@ -33,13 +33,13 @@ export const block = [
       item: [
         {
           title: 'React',
-          span: 'version : 1.0',
-          content: '48 %'
+          span: 'version : 1.0.1',
+          content: '47,6 %'
         },
         {
           title: 'Scss',
-          span: 'version : 1.0',
-          content: '52 %'
+          span: 'version : 1.0.1',
+          content: '52,4 %'
         }
       ]
     }
@@ -51,7 +51,7 @@ export const block = [
       description: 'Here you will find what features will be implemented in the next weeks !'
     },
     content: {
-      title:'Current version of the App : 1.0',
+      title:'Current version of the App : 1.0.1',
       item:  [
         {
           title: 'Crypto page',

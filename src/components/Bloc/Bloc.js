@@ -12,8 +12,8 @@ const Block = ({...element}) => {
   
   return (
     <div className="bloc">
-      <Section {...element.section} onClick={showContent}/>
-      <Content {...element.content} isShown={isShown} />
+      <Section {...element.section} isShown={isShown} onClick={showContent}/>
+      <Content {...element.content} isShown={isShown} onClick={showContent}/>
     </div>
   );
 };

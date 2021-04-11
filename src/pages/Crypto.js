@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import axios from 'axios';
 import Card from '../components/Card';
+import { Link } from 'react-router-dom';
 
 const Crypto = () => {
 
@@ -45,17 +46,18 @@ const Crypto = () => {
 
   return (
     <>
-    <Header />
     <div className="page-crypto">
+      <Header />
       <div className="background"/>
       <div className="page-crypto-text">
-        <h2>This page was made to pratice API calls. Here, every minute, a call is made to update the prices.</h2>
-
-        The responsiveness here is kind of broken... 
-      </div>
-      <div className="underconstruct">
-      <h3>Under construction</h3>
-        <p>To see what will be the next feature, please go to <a href="/about">ABOUT</a></p></div>
+        <h2>Crypto-money</h2>
+        <div className="underconstruct">
+          <h3>Under construction</h3>
+          <p>To see what will be the next feature, please go to <Link to='/about'>ABOUT</Link></p>
+        </div>
+          <h2  className='page-crypto-title'>This page was made to pratice API calls. Here, every minute, a call is made to update the prices.</h2>
+        </div>
+      
         <div className="crypto-list">
           {Object.keys(cryptos).map((index) => (
             <Card
