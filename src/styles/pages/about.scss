@@ -1,11 +1,9 @@
 .page-about {
   position: relative;
-  height: inherit;
-  width: inherit;
-  //background-color: #232323;
-  border-radius: 2%;
-
-  .background {
-    //background-color: rgb(4, 100, 79);
-  }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-radius: 20px;
+  padding: 1rem;
+  margin: 0 auto;
 }

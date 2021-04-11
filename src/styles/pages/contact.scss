@@ -1,9 +1,22 @@
 .page-contact {
   position: relative;
-  width: inherit;
   height: inherit;
-  
+
   .background {
     background-color: rgb(4, 57, 100);
+  }
+
+  & .contact {
+    z-index: 1;
+    
+  .underconstruct {
+    padding: 1rem;
+    background-color: rgb(5, 139, 16);
+  }
+
+    & a {
+      color: white ;
+
+    }
   }
 }

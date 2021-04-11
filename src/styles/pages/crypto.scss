@@ -1,9 +1,15 @@
 .page-crypto {
   position: relative;
   height: auto;
+  padding: 1rem;
   
 
   .background {
     background-color: rgba(207, 207, 207, 0.411);
+  }
+
+  .underconstruct {
+    padding: 1rem;
+    background-color: rgb(5, 139, 16);
   }
 }

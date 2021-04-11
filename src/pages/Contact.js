@@ -10,8 +10,9 @@ const Contact = () => {
         <Social />
       </div>
       <div className="contact">
-        <h2>Contacts</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, iste provident. Recusandae iusto excepturi ducimus. Non repellendus voluptates, consequatur dolor quod exercitationem aut fugiat, aperiam porro odio, consequuntur nostrum quas consectetur modi ex dolorum fuga ab maiores obcaecati magnam similique?</p>
+        <h2>Contacts</h2>      <div className="underconstruct">
+      <h3>Under construction</h3>
+        <p>To see what will be the next feature, please go to <a href="/about">ABOUT</a></p></div>
       </div>
     </div>
   );

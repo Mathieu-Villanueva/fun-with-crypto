@@ -48,6 +48,14 @@ const Crypto = () => {
     <Header />
     <div className="page-crypto">
       <div className="background"/>
+      <div className="page-crypto-text">
+        <h2>This page was made to pratice API calls. Here, every minute, a call is made to update the prices.</h2>
+
+        The responsiveness here is kind of broken... 
+      </div>
+      <div className="underconstruct">
+      <h3>Under construction</h3>
+        <p>To see what will be the next feature, please go to <a href="/about">ABOUT</a></p></div>
         <div className="crypto-list">
           {Object.keys(cryptos).map((index) => (
             <Card

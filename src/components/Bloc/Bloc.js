@@ -10,7 +10,6 @@ const Block = ({...element}) => {
     setIsShown(!isShown);
   }
   
-
   return (
     <div className="bloc">
       <Section {...element.section} onClick={showContent}/>

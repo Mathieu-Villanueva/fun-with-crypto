@@ -1,6 +1,6 @@
 .page-home {
     margin: 0 auto;
-    height: inherit;
+    height: 100vh;
     width: inherit;
     position: relative;
 }
@@ -211,9 +211,9 @@
 .activated {
     transition: 1s ease-in-out;
     transform: scale(.5) translate(0px);
-    position: fixed;
-    top: 12.50%;
-    left: 20%;
+    position: absolute;
+    top: 10vh;
+    left: 10vh;
     
     & a {
         border-radius: 0% 10% 10% 10%;

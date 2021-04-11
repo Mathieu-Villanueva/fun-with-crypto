@@ -1,9 +1,8 @@
 .page-about {
-  
+  max-width: 1920px;
   & .bloc {
-    width: inherit;
+    border-radius: 20px;
     z-index: 1;
-    margin: 1rem 0;
-    padding: 1rem;
+    margin: 1rem auto;
   }
 }
