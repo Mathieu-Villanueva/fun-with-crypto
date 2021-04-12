@@ -7,22 +7,23 @@
     z-index: 1;
     display: flex;
     color: white;
-    gap: .5rem;
-    border-radius: 20px;
+    gap: .375rem;
+    border-radius: 15px;
     margin: 0 auto;
-    min-height: 200px;
+    min-height: 150px;
+    height: 200px;
 
     &-left {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      background-color:  rgb(4, 57, 100);
-      min-width: 30ch;
-      max-width: 35ch;
+      background-color:  #006466;
+      min-width: 17.5ch;
+      max-width: 28ch;
       padding: 0 1rem;
       margin: 0 0 0 auto;
-      border-radius: 20px 0 0 20px;
+      border-radius: 15px 0 0 15px;
 
       &-title {
         font-family: 'Titillium Web', sans-serif;
@@ -30,10 +31,11 @@
         font-weight: 700;
       }
       &-button {
+        margin: .75rem;
         min-width: fit-content;
         cursor: pointer;
-        padding: .75rem;
-        font-size: 1.5rem;
+        padding: .5rem;
+        font-size: 1.2rem;
         background-color: white;
         border: none;
         flex-basis: 45%;
@@ -44,15 +46,16 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #232323;
+      background-color: #fff;
+      color: rgb(0, 0, 0);
       max-width: 75%;
       padding: 0 1rem;
       margin: 0 auto 0 0;
-      border-radius: 0 20px 20px 0;
+      border-radius: 0 15px 15px 0;
 
       &-description {
-        max-width: 40ch;
-        font-size: 1.5rem;
+        max-width: 30ch;
+        font-size: 1.2rem;
       }
     }
   }
@@ -63,31 +66,31 @@
     z-index: 1;
     color: white;
     gap: .5rem;
-    border-radius: 20px;
+    border-radius: 15px;
     margin: 0 auto;
-    min-height: 200px;
+    min-height: 150px;
 
     &-left {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      background-color:  rgb(4, 57, 100);
-      min-width: 30ch;
-      padding: 1rem;
+      background-color:  #006466;
+      min-width: 22ch;
+      padding: .75rem;
       margin: 0 0 0 auto;
-      border-radius: 20px 20px 0 0;
+      border-radius: 15px 15px 0 0;
 
       &-title {
         font-family: 'Titillium Web', sans-serif;
-        font-size: 2.5rem;
+        font-size: 1.8rem;
         font-weight: 700;
         flex-basis: 90%;
       }
       &-button {
         cursor: pointer;
         padding: .75rem;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         background-color: white;
         border: none;
       }
@@ -99,10 +102,10 @@
       background-color: #232323;
       padding:1rem;
       margin: 0 auto 0 0;
-      border-radius: 0 0 20px 20px;
+      border-radius: 0 0 15px 15px;
 
       &-description {
-        max-width: 40ch;
+        max-width: 30ch;
         font-size: 1.2rem;
       }
     }

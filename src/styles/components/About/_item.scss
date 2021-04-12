@@ -1,21 +1,22 @@
 .item-card {
-  max-width: 35ch;
+  max-width: 26ch;
   min-width: auto;
   margin: 1rem;
-  background-color: rgba(128, 128, 128, 0.568);
-  border-radius: 20px;
-  padding: 1rem;
+  background-color: #006466;
+  color: white;
+  border-radius: 15px;
+  padding: .75rem;
   //box-sizing: border-box;
 
   &-title {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   &-span {
-    font-size: .8rem;
+    font-size: .5rem;
   }
 
   &-content {
-    font-size: 1.2rem;  
+    font-size: .9rem;  
   }
 }

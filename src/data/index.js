@@ -86,7 +86,7 @@ export const block = [
         {
           title: 'About page',
           span: 'version : 2.x',
-          content:'Right now, the design is really bad but I\' have no idea what I could do to improve it... I am really bad at this...'
+          content:'Right now, the design is really bad but I\' have no idea what I could do to improve it... I am really bad at this v_v'
         },
      ]
     }
